@@ -1,6 +1,7 @@
 package com.dipak.diceroller
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dipak.diceroller.databinding.ActivityMainBinding
 
@@ -15,5 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)    // Replace layout reference with binding's root object
 
+        binding.rollButton.setOnClickListener {
+            Toast.makeText(this@MainActivity, "button clicked", Toast.LENGTH_SHORT).show()
+        }
     }
 }
