@@ -10,10 +10,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
         // Intializing binding object by inflating layoutInflater object
         binding = ActivityMainBinding.inflate(layoutInflater)
-
-        super.onCreate(savedInstanceState)
         setContentView(binding.root)    // Replace layout reference with binding's root object
 
         binding.rollButton.setOnClickListener {
